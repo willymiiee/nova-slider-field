@@ -14,6 +14,16 @@ class NovaSliderField extends Field
     public $component = 'nova-slider-field';
 
     /**
+     * Set the values as array
+     * @param array $values
+     * @return NovaSliderField
+     */
+    public function values(array $values)
+    {
+        return $this->withMeta(['value' => $values]);
+    }
+
+    /**
      * Set the minimum value, defaults to 0
      * @param float $min
      * @return NovaSliderField
