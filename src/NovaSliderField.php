@@ -54,7 +54,16 @@ class NovaSliderField extends Field
     }
 
     /**
-     * Don't show a tooltip on the detail page
+     * Always show a tooltip
+     * @return NovaSliderField
+     */
+    public function showTooltip()
+    {
+        return $this->withMeta(['tooltip' => 'always']);
+    }
+
+    /**
+     * Don't show a tooltip
      * @return NovaSliderField
      */
     public function withoutTooltip()
